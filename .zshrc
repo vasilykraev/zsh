@@ -22,6 +22,13 @@ export HISTFILE HISTSIZE SAVEHIST
 ZSH=$ZHOME/.oh-my-zsh
 ZSH_CUSTOM=$ZHOME/.vk_custom
 
+### INSTALL
+if [[ ! -d .oh-my-zsh ]]; then
+  echo '>>> oh-my-zsh not found, install from git'
+  git clone git@github.com:robbyrussell/oh-my-zsh.git $ZSH
+  git clone git@github.com:zsh-users/zsh-syntax-highlighting.git $ZSH/custom/plugins/zsh-syntax-highlighting
+fi
+
 # Set name of the theme to load.
 # Look in .oh-my-zsh/themes/ or in ZSH_CUSTOM
 ZSH_THEME="vk"
