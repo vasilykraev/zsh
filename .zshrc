@@ -55,12 +55,13 @@ source $ZSH_CUSTOM/osx_related.zsh
 source $ZSH_CUSTOM/work.zsh
 source $ZSH_CUSTOM/drupal.zsh
 
-
+MAMP_PHP53=$(find /Applications/MAMP/bin/php -type d -name "php5.3*" | sort | tail -1)
 BUNDLE_PATH=$GEM_PATH
 export LANG=ru_RU.UTF-8
-export DRUSH_PHP="/Applications/MAMP/bin/php/php5.3.27/bin/php"
+
+export DRUSH_PHP="$MAMP_PHP53/bin/php"
 export PATH="$HOME/.rvm/bin:$PATH"
 export PATH="/Applications/Postgres93.app/Contents/MacOS/bin:$PATH"
-export PATH="/Applications/MAMP/bin:/Applications/MAMP/Library/bin:$(find /Applications/MAMP/bin/php -type d -name "php5.3*" | sort | tail -1)/bin:$PATH"
+export PATH="/Applications/MAMP/bin:/Applications/MAMP/Library/bin:$MAMP_PHP53/bin:$PATH"
 
 cd ~
