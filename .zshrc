@@ -23,7 +23,7 @@ ZSH=$ZHOME/.oh-my-zsh
 ZSH_CUSTOM=$ZHOME/.vk_custom
 
 ### INSTALL
-if [[ ! -d .oh-my-zsh ]]; then
+if [[ ! -d $ZSH ]]; then
   echo '>>> oh-my-zsh not found, install from git'
   git clone git@github.com:robbyrussell/oh-my-zsh.git $ZSH
   git clone git@github.com:zsh-users/zsh-syntax-highlighting.git $ZSH/custom/plugins/zsh-syntax-highlighting
