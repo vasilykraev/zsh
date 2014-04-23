@@ -27,6 +27,7 @@ if [[ ! -d $ZSH ]]; then
   echo '>>> oh-my-zsh not found, install from git'
   git clone git@github.com:robbyrussell/oh-my-zsh.git $ZSH
   git clone git@github.com:zsh-users/zsh-syntax-highlighting.git $ZSH/custom/plugins/zsh-syntax-highlighting
+  git clone git@github.com:zsh-users/zsh-completions.git $ZSH/custom/plugins/zsh-completions
 fi
 
 # Set name of the theme to load.
@@ -42,7 +43,7 @@ COMPLETION_WAITING_DOTS="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(extract git history-substring-search osx rails rvm sublime vagrant zsh-syntax-highlighting)
+plugins=(extract git history-substring-search osx rails rvm sublime vagrant zsh-completions zsh-syntax-highlighting)
 
 # Load
 source $ZSH/oh-my-zsh.sh
