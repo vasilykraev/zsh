@@ -5,11 +5,11 @@ ZHOME=$HOME/.zsh
 ###
 
 # Set up a sane modern history
-setopt HIST_SAVE_NO_DUPS
-setopt HIST_IGNORE_ALL_DUPS
 setopt EXTENDED_HISTORY
-HISTSIZE=2000
-SAVEHIST=2000
+setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_REDUCE_BLANKS
+setopt HIST_SAVE_NO_DUPS
+
 HISTFILE=$ZHOME/.zsh_history
 
 ###
@@ -37,6 +37,10 @@ DISABLE_AUTO_UPDATE="true"
 
 # Uncomment following line if you want red dots to be displayed while waiting for completion
 COMPLETION_WAITING_DOTS="true"
+
+# stamp shown in the history command output.
+# The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
+HIST_STAMPS="dd.mm.yyyy"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
