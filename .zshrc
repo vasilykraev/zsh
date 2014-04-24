@@ -11,8 +11,6 @@ setopt EXTENDED_HISTORY
 HISTSIZE=2000
 SAVEHIST=2000
 HISTFILE=$ZHOME/.zsh_history
-export HISTFILE HISTSIZE SAVEHIST
-
 
 ###
 ### OH-MY-ZSH
@@ -57,11 +55,12 @@ source $ZSH_CUSTOM/drupal.zsh
 
 MAMP_PHP53=$(find /Applications/MAMP/bin/php -type d -name "php5.3*" | sort | tail -1)
 BUNDLE_PATH=$GEM_PATH
-export LANG=ru_RU.UTF-8
+LANG=ru_RU.UTF-8
 
-export DRUSH_PHP="$MAMP_PHP53/bin/php"
-export PATH="$HOME/.rvm/bin:$PATH"
-export PATH="/Applications/Postgres93.app/Contents/MacOS/bin:$PATH"
-export PATH="/Applications/MAMP/bin:/Applications/MAMP/Library/bin:$MAMP_PHP53/bin:$PATH"
+DRUSH_PHP="$MAMP_PHP53/bin/php"
+PATH="$PATH:$HOME/.rvm/bin"
+PATH="$PATH:/Applications/Postgres93.app/Contents/MacOS/bin"
+PATH="$PATH:/Applications/MAMP/bin:/Applications/MAMP/Library/bin:$MAMP_PHP53/bin"
+
 
 cd ~
