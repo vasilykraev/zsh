@@ -19,3 +19,5 @@ function clearlog() {
 function pman () {
   man -t $@ | open -f -a /Applications/Preview.app
 }
+
+cdpath=(~/Desktop ~/Downloads)

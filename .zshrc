@@ -66,5 +66,6 @@ PATH="$PATH:$HOME/.rvm/bin"
 PATH="$PATH:/Applications/Postgres93.app/Contents/MacOS/bin"
 PATH="$PATH:/Applications/MAMP/bin:/Applications/MAMP/Library/bin:$MAMP_PHP53/bin"
 
+setopt correctall
 
 cd ~
