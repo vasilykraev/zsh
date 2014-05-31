@@ -10,10 +10,6 @@ Here it is my zsh config, with [oh-my-zsh](https://github.com/robbyrussell/oh-my
 
 #### 1. Install zsh
 
-**Mac OS X**
-
-Already installed ;)
-
 **Debian / Ubuntu / Mint / ElementaryOS**
 
 ```
@@ -25,6 +21,20 @@ sudo apt-get update && sudo apt-get install zsh
 ```
 pkg_add -r zsh
 ```
+
+**Mac OS X**
+
+Old version already installed ;)
+
+If you need new version, than install, using [brew](http://brew.sh/).
+
+```
+brew install zsh
+# Add new installed zsh to list of acceptable shells for chpass(1)
+sudo sh -c "echo '/usr/local/bin/zsh' >> /etc/shells"
+```
+You must change shell, typing `chsh -s /usr/local/bin/zsh`
+
 
 #### 2. Change shell
 
