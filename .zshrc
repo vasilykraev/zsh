@@ -20,6 +20,18 @@ HISTFILE=$ZHOME/.zsh_history
 ZSH=$ZHOME/.oh-my-zsh
 ZSH_CUSTOM=$ZHOME/.vk_custom
 
+#cdpath=(~ ~/Desktop ~/Downloads)
+fpath=($ZHOME/zsh-completions/src $fpath)
+#zstyle ":completion:*:descriptions" format "%B%d%b"
+
+# Group matches and Describe
+zstyle ':completion:*:matches' group 'yes'
+zstyle ':completion:*:options' description 'yes'
+zstyle ':completion:*:options' auto-description '%d'
+zstyle ':completion:*:descriptions' format $'\e[01;33m -- %d --\e[0m'
+zstyle ':completion:*:messages' format $'\e[01;35m -- %d --\e[0m'
+zstyle ':completion:*:warnings' format $'\e[01;31m -- No Matches Found --\e[0m'
+
 ### INSTALL
 if [[ ! -d $ZSH ]]; then
   echo '>>> oh-my-zsh not found, install from git'
