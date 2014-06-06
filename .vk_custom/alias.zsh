@@ -16,7 +16,7 @@ alias sgi='sudo gem install' # Install ruby stuff
 
 # git
 alias gh='git log --graph --date=short'
-alias ghh='git log --format="%h %ad | %s%d [%an]" --graph --date=short'
+alias ghh='git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit'
 alias gs='git status '
 alias ga='git add '
 alias go='git checkout '
@@ -24,3 +24,5 @@ alias gk='gitk --all&'
 alias gx='gitx --all'
 alias grr='git reset --hard'
 alias gl='git pull -r'
+alias gsh='git stash'
+alias gshp='git stash pop'
