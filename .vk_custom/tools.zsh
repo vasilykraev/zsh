@@ -31,3 +31,8 @@ function pk () {
     echo "'$1' is not a valid file"
   fi
 }
+
+function fixperms() {
+  find . -type d -exec chmod 755 {} \;
+  find . -type f -exec chmod 644 {} \;
+}
