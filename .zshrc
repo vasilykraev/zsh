@@ -35,9 +35,9 @@ zstyle ':completion:*:warnings' format $'\e[01;31m -- No Matches Found --\e[0m'
 ### INSTALL
 if [ ! -d $ZSH ]; then
   echo '>>> oh-my-zsh not found, install from git'
-  git clone git@github.com:robbyrussell/oh-my-zsh.git $ZSH
-  git clone git@github.com:zsh-users/zsh-syntax-highlighting.git $ZSH/custom/plugins/zsh-syntax-highlighting
-  git clone git@github.com:zsh-users/zsh-completions.git $ZSH/zsh-completions
+  git clone https://github.com/robbyrussell/oh-my-zsh $ZSH
+  git clone https://github.com/zsh-users/zsh-syntax-highlighting $ZSH/custom/plugins/zsh-syntax-highlighting
+  git clone https://github.com/zsh-users/zsh-completions $ZSH/zsh-completions
 fi
 
 # Set name of the theme to load.
