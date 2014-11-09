@@ -9,6 +9,10 @@ function speedupmacos() {
   defaults write NSGlobalDomain NSWindowResizeTime 0.01
 }
 
+function dis_spotlight() {
+  sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.metadata.mds.plist
+}
+
 function clearlog() {
   sudo rm -rf /Library/Logs/*
   sudo rm -rf /Applications/MAMP/logs/*

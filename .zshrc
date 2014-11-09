@@ -1,18 +1,6 @@
 ZHOME=$HOME/.zsh
 
 ###
-### HISTORY SETTINGS
-###
-
-# Set up a sane modern history
-setopt EXTENDED_HISTORY
-setopt HIST_IGNORE_ALL_DUPS
-setopt HIST_REDUCE_BLANKS
-setopt HIST_SAVE_NO_DUPS
-
-HISTFILE=$ZHOME/.zsh_history
-
-###
 ### OH-MY-ZSH
 ###
 
@@ -61,6 +49,19 @@ plugins=(autopep8 mix artisan capistrano extract git history-substring-search os
 
 # Load
 source $ZSH/oh-my-zsh.sh
+
+
+###
+### HISTORY SETTINGS
+###
+
+# Set up a sane modern history
+setopt EXTENDED_HISTORY
+setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_REDUCE_BLANKS
+setopt HIST_SAVE_NO_DUPS
+
+HISTFILE=$ZHOME/.zsh_history
 
 # Load my stuff
 source $ZSH_CUSTOM/alias.zsh
