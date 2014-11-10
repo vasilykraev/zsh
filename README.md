@@ -47,7 +47,7 @@ chsh -s $(which zsh)
 ```
 cd ~
 echo 'source $HOME/.zsh/.zshrc' > .zlogin
-git clone github.com/vasilykraev/zsh.git .zsh
+git clone https://github.com/vasilykraev/zsh.git .zsh
 zsh
 ```
 
