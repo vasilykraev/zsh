@@ -1,6 +1,6 @@
 # Mac Finder hidden files
-alias show_hidden="defaults write com.apple.Finder AppleShowAllFiles YES && defaults write com.apple.Finder AppleShowAllFiles -boolean true && killall Finder"
-alias hide_hidden="defaults write com.apple.Finder AppleShowAllFiles NO && defaults delete com.apple.Finder AppleShowAllFiles && killall Finder"
+alias show_hidden="killall cfprefsd && defaults write com.apple.finder AppleShowAllFiles -bool TRUE && killall Finder"
+alias hide_hidden="killall cfprefsd && defaults write com.apple.finder AppleShowAllFiles -bool FALSE && killall Finder"
 
 function speedupmacos() {
   #Skip Disk Image Verification
