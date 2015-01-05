@@ -70,15 +70,7 @@ source $ZSH_CUSTOM/osx_related.zsh
 source $ZSH_CUSTOM/work.zsh
 source $ZSH_CUSTOM/drupal.zsh
 
-MAMP_PHP53=$(find /Applications/MAMP/bin/php -type d -name "php5.3*" | sort | tail -1)
-BUNDLE_PATH=$GEM_PATH
 LANG=ru_RU.UTF-8
-
-DRUSH_PHP="$MAMP_PHP53/bin/php"
-PATH="$PATH:$HOME/.rvm/bin"
-PATH="$PATH:/Applications/Postgres93.app/Contents/MacOS/bin"
-PATH="$PATH:/Applications/MAMP/bin:/Applications/MAMP/Library/bin:$MAMP_PHP53/bin"
-
 setopt correctall
 
 cd ~
