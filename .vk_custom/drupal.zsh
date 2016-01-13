@@ -18,7 +18,7 @@ function zsh_drush_support() {
   cat $DRUSH_REPO/examples/example.bashrc >> $ZSH_CUSTOM/drush_alias.zsh
 }
 
-if [[ ! -a $ZSH_CUSTOM/drush.complete.sh ]]; then 
+if [[ -a $ZSH_CUSTOM/drush.complete.sh ]]; then 
   autoload bashcompinit
   bashcompinit
   source $ZSH_CUSTOM/drush.complete.sh
