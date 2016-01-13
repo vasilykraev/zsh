@@ -3,7 +3,7 @@ function globalgitignore () {
 }
 
 function mk () {
-  mkdir "$@" && cd "$@"
+  mkdir -p "$@" && cd "$@"
 }
 
 # determine local IP address
@@ -35,4 +35,12 @@ function pk () {
 function fixperms() {
   find . -type d -exec chmod 0755 {} \;
   find . -type f -exec chmod 0644 {} \;
+}
+
+function unmerged() {
+  !git branch -r --no-merged | grep -v HEAD | xargs -L1 git --no-pager log --pretty=tformat:'%Cgreen%d%Creset - %h by %an (%Cblue%ar%Creset)' -1
+}
+
+function merged() {
+  !git branch -r --merged | grep -v HEAD | xargs -L1 git --no-pager log --pretty=tformat:'%Cgreen%d%Creset - %h by %an (%Cblue%ar%Creset)' -1
 }

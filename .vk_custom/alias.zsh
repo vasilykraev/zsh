@@ -26,3 +26,4 @@ alias grr='git reset --hard'
 alias gl='git pull -r'
 alias gsh='git stash'
 alias gshp='git stash pop'
+

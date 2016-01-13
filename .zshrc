@@ -70,6 +70,9 @@ source $ZSH_CUSTOM/osx_related.zsh
 source $ZSH_CUSTOM/work.zsh
 source $ZSH_CUSTOM/drupal.zsh
 
+LC_CTYPE=en_US.UTF-8
+LC_ALL=en_US.UTF-8
+
 LANG=ru_RU.UTF-8
 setopt correctall
 
