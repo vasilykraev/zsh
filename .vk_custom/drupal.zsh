@@ -11,3 +11,17 @@ function drein {
 function disall () {
   drush pm-list --status=enabled --pipe | grep $1 | xargs -i drush pm-disable '{}' -y
 }
+
+function zsh_drush_support() {
+  DRUSH_REPO='/usr/local/src/drush'
+  cp $DRUSH_REPO/drush.complete.sh $ZSH_CUSTOM/drush.complete.sh
+  cat $DRUSH_REPO/examples/example.bashrc >> $ZSH_CUSTOM/drush_alias.zsh
+}
+
+if [[ ! -a $ZSH_CUSTOM/drush.complete.sh ]]; then 
+  autoload bashcompinit
+  bashcompinit
+  source $ZSH_CUSTOM/drush.complete.sh
+  source $ZSH_CUSTOM/drush_alias.zsh
+fi
+
